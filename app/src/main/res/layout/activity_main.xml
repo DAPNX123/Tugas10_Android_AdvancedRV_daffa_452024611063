@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jadwal Bis"
+        android:textColor="@color/text_white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etBusName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_input"
+        android:hint="Nama Bis"
+        android:padding="12dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <LinearLayout
+        android:id="@+id/rowTimes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBusName">
+
+        <EditText
+            android:id="@+id/etDeparture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:hint="Keberangkatan"
+            android:padding="12dp"
+            android:textColor="@color/text_white"
+            android:textColorHint="@color/text_gray" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/etArrival"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:hint="Kedatangan"
+            android:padding="12dp"
+            android:textColor="@color/text_white"
+            android:textColorHint="@color/text_gray" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etDestination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:hint="Tujuan"
+        android:padding="12dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rowTimes" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/accent_blue"
+        android:padding="12dp"
+        android:text="Tambah Jadwal"
+        android:textAllCaps="false"
+        android:textColor="@color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDestination" />
+
+    <TextView
+        android:id="@+id/tvListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Daftar Jadwal:"
+        android:textColor="@color/text_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSubmit" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvListHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

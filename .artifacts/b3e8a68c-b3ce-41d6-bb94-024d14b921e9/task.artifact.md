@@ -1,0 +1,12 @@
+- `[x]` Update `libs.versions.toml` with `appcompat`, `recyclerview`, `cardview`, and `constraintlayout`
+- `[x]` Update `app/build.gradle.kts` to enable View Binding and add dependencies
+- `[x]` Update `BusItem` data model (`BusItem.kt`) to include destination and times
+- `[x]` Configure Dark Theme colors and styles in `themes.xml` and `colors.xml`
+- `[x]` Update XML layouts:
+    - `[x]` `item_bus.xml` (Match reference image design)
+    - `[x]` `activity_main.xml` (Add input form)
+- `[x]` Update `BusListAdapter.kt` to bind new fields and apply dark styling
+- `[x]` Update `MainActivity.kt`:
+    - `[x]` Implement "Tambah Jadwal" logic
+    - `[x]` Update dummy data
+- `[x]` Verify the build and UI
